@@ -1,7 +1,7 @@
 local highlight = require'adwaita.utils'.highlight
 
 local colors = {
-     blue_1              = "#99C1F1",
+     blue_1              = "#60C7FF",
      blue_2              = "#62A0EA",
      blue_3              = "#3584E4",
      blue_4              = "#1C71D8",
@@ -14,6 +14,7 @@ local colors = {
      brown_4             = "#865E3C",
      brown_5             = "#63452C",
      chameleon_3         = "#4E9A06",
+     dark_0              = "#88888A",
      dark_1              = "#77767B",
      dark_2              = "#5E5C64",
      dark_3              = "#504E55",
@@ -28,7 +29,7 @@ local colors = {
      green_5             = "#26A269",
      green_6             = "#1F7F56",
      green_7             = "#1C6849",
-     libadwaita_dark     = "#262626",
+     libadwaita_dark     = "#1F1F1D",
      libadwaita_dark_alt = "#303030",
      light_1             = "#FFFFFF",
      light_2             = "#FCFCFC",
@@ -37,12 +38,13 @@ local colors = {
      light_5             = "#C0BFBC",
      light_6             = "#B0AFAC",
      light_7             = "#9A9996",
-     orange_1            = "#FFBE6F",
-     orange_2            = "#FFA348",
-     orange_3            = "#FF7800",
+     orange_0            = "#FFB443",
+     orange_1            = "#FFC08A",
+     orange_2            = "#FFBE6F",
+     orange_3            = "#FFAB2F",
      orange_4            = "#E66100",
      orange_5            = "#C64600",
-     purple_1            = "#DC8ADD",
+     purple_1            = "#FF6390",
      purple_2            = "#C061CB",
      purple_3            = "#9141AC",
      purple_4            = "#813D9C",
@@ -57,15 +59,18 @@ local colors = {
      teal_3              = "#33B2A4",
      teal_4              = "#26A1A2",
      teal_5              = "#218787",
+     teal_6		 = "#81D3B0",
      violet_2            = "#7D8AC7",
      violet_3            = "#6362C8",
      violet_4            = "#4E57BA",
+     yellow_0            = "#FFF6D3",
      yellow_1            = "#F9F06B",
      yellow_2            = "#F8E45C",
      yellow_3            = "#F6D32D",
      yellow_4            = "#F5C211",
      yellow_5            = "#E5A50A",
      yellow_6            = "#D38B09",
+     yellow_7            = "#FFEACA",
      split_and_borders   = "#4F4F4F"
 }
 
@@ -113,17 +118,17 @@ M.set = function ()
     highlight('VisualNOS',                     'none',                     colors.blue_7,              'none',      'none' )
     highlight('WarningMsg',                    colors.yellow_4,            'none',                     'bold',      'none' )
     highlight('WildMenu',                      colors.light_4,             colors.blue_5,              'none',      'none' )
-    highlight('Comment',                       colors.dark_1,              'none',                     'none',      'none' )
+    highlight('Comment',                       colors.dark_0,              'none',                     'italic',      'none' )
     highlight('Constant',                      colors.violet_2,            'none',                     'none',      'none' )
     highlight('String',                        colors.teal_2,              'none',                     'none',      'none' )
     highlight('Character',                     colors.teal_2,              'none',                     'none',      'none' )
-    highlight('Number',                        colors.violet_2,            'none',                     'none',      'none' )
-    highlight('Boolean',                       colors.violet_2,            'none',                     'none',      'none' )
-    highlight('Float',                         colors.violet_2,            'none',                     'none',      'none' )
+    highlight('Number',                        colors.purple_1,            'none',                     'none',      'none' )
+    highlight('Boolean',                       colors.purple_1,            'none',                     'none',      'none' )
+    highlight('Float',                         colors.purple_1,            'none',                     'none',      'none' )
     highlight('Identifier',                    colors.orange_2,            'none',                     'none',      'none' )
     highlight('Function',                      colors.blue_2,              'none',                     'none',      'none' )
     highlight('Statement',                     colors.purple_2,            'none',                     'none',      'none' )
-    highlight('Conditional',                   colors.orange_2,            'none',                     'bold',      'none' )
+    highlight('Conditional',                   colors.purple_1,            'none',                     'bold',      'none' )
     highlight('Repeat',                        colors.purple_1,            'none',                     'none',      'none' )
     highlight('Label',                         colors.purple_2,            'none',                     'none',      'none' )
     highlight('Operator',                      colors.light_4,             'none',                     'none',      'none' )
@@ -141,7 +146,7 @@ M.set = function ()
     highlight('SpecialChar',                   colors.red_3,               'none',                     'none',      'none' )
     highlight('Tag',                           colors.teal_2,              'none',                     'none',      'none' )
     highlight('Delimiter',                     colors.light_4,             'none',                     'none',      'none' )
-    highlight('SpecialComment',                colors.dark_1,              'none',                     'none',      'none' )
+    highlight('SpecialComment',                colors.dark_0,              'none',                     'italic',      'none' )
     highlight('Debug',                         colors.light_4,             'none',                     'none',      'none' )
     highlight('Underline',                     colors.light_4,             'none',                     'none',      'none' )
     highlight('Conceal',                       colors.light_4,             'none',                     'none',      'none' )
@@ -157,43 +162,43 @@ M.set = function ()
 
     highlight('TSError',                       colors.red_1,               'none',                     'undercurl', 'none' )
     highlight('TSTSPunctBracket',              colors.light_4,             'none',                     'none',      'none' )
-    highlight('TSPunctSpecial',                colors.red_3,               'none',                     'none',      'none' )
+    highlight('TSPunctSpecial',                colors.light_2,               'none',                     'none',      'none' )
     highlight('markdownTSPunctSpecial',        colors.teal_2,              'none',                     'bold',      'none' )
-    highlight('TSConstant',                    colors.violet_2,            'none',                     'none',      'none' )
-    highlight('TSConstBuiltin',                colors.violet_2,            'none',                     'none',      'none' )
+    highlight('TSConstant',                    colors.purple_1,            'none',                     'none',      'none' )
+    highlight('TSConstBuiltin',                colors.purple_1,            'none',                     'none',      'none' )
     highlight('TSConstMacro',                  colors.teal_3,              'none',                     'none',      'none' )
     highlight('TSStringRegex',                 colors.teal_2,              'none',                     'none',      'none' )
-    highlight('TSString',                      colors.teal_2,              'none',                     'none',      'none' )
+    highlight('TSString',                      colors.teal_1,              'none',                     'none',      'none' )
     highlight('TSCharacter',                   colors.teal_2,              'none',                     'none',      'none' )
-    highlight('TSNumber',                      colors.violet_2,            'none',                     'none',      'none' )
-    highlight('TSBoolean',                     colors.violet_2,            'none',                     'none',      'none' )
-    highlight('TSFloat',                       colors.violet_2,            'none',                     'none',      'none' )
+    highlight('TSNumber',                      colors.purple_1,            'none',                     'none',      'none' )
+    highlight('TSBoolean',                     colors.purple_1,            'none',                     'none',      'none' )
+    highlight('TSFloat',                       colors.purple_1,            'none',                     'none',      'none' )
     highlight('TSAnnotation',                  colors.yellow_4,            'none',                     'none',      'none' )
     highlight('TSAttribute',                   colors.orange_4,            'none',                     'none',      'none' )
-    highlight('TSNamespace',                   colors.orange_2,            'none',                     'none',      'none' )
-    highlight('TSFuncBuiltin',                 colors.blue_2,              'none',                     'none',      'none' )
-    highlight('TSFuncMacro',                   colors.blue_2,              'none',                     'none',      'none' )
-    highlight('TSFunction',                    colors.blue_2,              'none',                     'none',      'none' )
-    highlight('TSParameter',                   colors.light_4,             'none',                     'none',      'none' )
-    highlight('TSParameterReference',          colors.light_4,             'none',                     'none',      'none' )
+    highlight('TSNamespace',                   colors.yellow_0,            'none',                     'none',      'none' )
+    highlight('TSFuncBuiltin',                 colors.light_1,              'none',                     'bold',      'none' )
+    highlight('TSFuncMacro',                   colors.light_1,              'none',                     'bold',      'none' )
+    highlight('TSFunction',                    colors.light_1,              'none',                     'bold',      'none' )
+    highlight('TSParameter',                   colors.light_4,             'none',                     'italic',      'none' )
+    highlight('TSParameterReference',          colors.light_4,             'none',                     'italic',      'none' )
     highlight('TSMethod',                      colors.blue_2,              'none',                     'none',      'none' )
-    highlight('TSField',                       colors.light_4,             'none',                     'none',      'none' )
-    highlight('TSProperty',                    colors.light_4,             'none',                     'none',      'none' )
+    highlight('TSMacro',                      colors.blue_2,              'none',                     'none',      'none' )
+    highlight('TSField',                       colors.light_3,             'none',                     'none',      'none' )
+    highlight('TSProperty',                    colors.chameleon_3,             'none',                     'none',      'none' )
     highlight('TSConstructor',                 colors.blue_2,              'none',                     'none',      'none' )
-    highlight('TSConditional',                 colors.orange_2,            'none',                     'bold',      'none' )
-    highlight('TSRepeat',                      colors.purple_1,            'none',                     'none',      'none' )
-    highlight('TSLabel',                       colors.purple_2,            'none',                     'none',      'none' )
-    highlight('TSOperator',                    colors.light_4,             'none',                     'none',      'none' )
-    highlight('TSKeyword',                     colors.orange_2,            'none',                     'bold',      'none' )
-    highlight('TSKeywordFunction',             colors.orange_2,            'none',                     'bold',      'none' )
+    highlight('TSConditional',                 colors.orange_3,            'none',                     'bold',      'none' )
+    highlight('TSRepeat',                      colors.orange_3,            'none',                     'bold',      'none' )
+    highlight('TSLabel',                       colors.orange_2,            'none',                     'italic',      'none' )
+    highlight('TSOperator',                    colors.light_1,             'none',                     'none',      'none' )
+    highlight('TSKeyword',                     colors.blue_1,            'none',                     'italic',      'none' )
+    highlight('TSKeywordFunction',             colors.blue_1,            'none',                     'bold',      'none' )
     highlight('TSKeywordOperator',             colors.light_4,             'none',                     'bold',      'none' )
     highlight('TSException',                   colors.orange_4,            'none',                     'none',      'none' )
-    highlight('TSType',                        colors.teal_2,              'none',                     'bold',      'none' )
-    highlight('TSTypeBuiltin',                 colors.teal_2,              'none',                     'bold',      'none' )
-    highlight('TSStructure',                   colors.teal_2,              'none',                     'bold',      'none' )
-    highlight('TSInclude',                     colors.orange_2,            'none',                     'bold',      'none' )
-    highlight('TSVariable',                    colors.light_4,             'none',                     'none',      'none' )
-    highlight('TSVariableBuiltin',             colors.light_4,             'none',                     'none',      'none' )
+    highlight('TSType',                        colors.orange_1,              'none',                     'none',      'none' )
+    highlight('TSStructure',                   colors.orange_1,              'none',                     'none',      'none' )
+    highlight('TSInclude',                     colors.orange_2,            'none',                     'italic',      'none' )
+    highlight('TSVariable',                    colors.light_3,             'none',                     'none',      'none' )
+    highlight('TSVariableBuiltin',             colors.light_3,             'none',                     'none',      'none' )
     highlight('TSText',                        colors.teal_2,              'none',                     'none',      'none' )
     highlight('TSUnderline',                   colors.light_4,             'none',                     'none',      'none' )
     highlight('TSTag',                         colors.teal_2,              'none',                     'none',      'none' )
@@ -204,7 +209,7 @@ M.set = function ()
     highlight('TSStrong',                      'none',                     'none',                     'bold',      'none' )
     highlight('TSURI',                         colors.blue_2,              'none',                     'italic',    'none' )
     highlight('TSTextReference',               colors.red_3,               'none',                     'none',      'none' )
-    highlight('TSPunctDelimiter',              'none',                     'none',                     'none',      'none' )
+    highlight('TSPunctDelimiter',              colors.light_2,             'none',                     'bold',      'none' )
     highlight('TSStringEscape',                colors.teal_2,              'none',                     'none',      'none' )
     highlight('TSNote',                        colors.blue_2,              'none',                     'none',      'none' )
     highlight('TSWarning',                     colors.yellow_2,            'none',                     'none',      'none' )
@@ -247,9 +252,17 @@ M.set = function ()
     highlight('CompeDocumentation',            colors.light_4,             colors.libadwaita_dark_alt, 'bold',      'none' )
     highlight('CompeDocumentationBorder',      colors.split_and_borders,   colors.libadwaita_dark_alt, 'bold',      'none' )
 
-	highlight('LspReferenceText',              'none',                     colors.blue_7,              'none',      'none' )
-	highlight('LspReferenceRead',              'none',                     colors.blue_7,              'none',      'none' )
-	highlight('LspReferenceWrite',             'none',                     colors.blue_7,              'none',      'none' )
+highlight('LspReferenceText',              'none',                     colors.blue_7,              'none',      'none' )
+highlight('LspReferenceRead',              'none',                     colors.blue_7,              'none',      'none' )
+highlight('LspReferenceWrite',             'none',                     colors.blue_7,              'none',      'none' )
+
+-- highlight('GitSignsAddLn',             'none',                     colors.green_7,              'none',      'none' )
+-- highlight('GitSignsChangeLn',             'none',                     colors.blue_7,              'none',      'none' )
+-- highlight('GitSignsDeleteLn',             'none',                     colors.red_5,              'none',      'none' )
+
+    highlight('GitSignsAdd',                       colors.green_1,              colors.libadwaita_dark,     'none',      'none' )
+    highlight('GitSignsChange',                    colors.blue_1,            colors.libadwaita_dark,     'none',      'none' )
+    highlight('GitSignsDelete',                    colors.red_1,               colors.libadwaita_dark,     'none',      'none' )
 end
 
 
